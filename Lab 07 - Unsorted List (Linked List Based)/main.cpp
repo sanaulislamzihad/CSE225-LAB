@@ -150,34 +150,12 @@ int main()
     for(int i = 0; i < firstList.Length(); i++)
     {
         firstList.GetNext(num);
-        cout << num << " ";
+        cout <<  num << " ";
     }
     cout << endl;
     
     int max;
-    
-    while (firstList.Length() != 0)
-    {
-        firstList.Reset();
-        firstList.GetNext(num);
-        max = num;
-        for (int i = 0; i < firstList.Length(); i++)
-        {
-            firstList.GetNext(num);
-            if (num > max)
-                max = num;
-        }
-        firstList.Delete(max);
-        secondList.Insert(max);
-    }
-    
-
-    
-    for (int i = 0; i < secondList.Length(); i++)
-    {
-        secondList.GetNext(num);
-        cout << num << " ";
-    }
+   
     
     while (firstList.Length() != 0)
     {
@@ -194,5 +172,10 @@ int main()
         secondList.Search(max, found);
         if (!found)
             secondList.Insert(max);
+    }
+    for (int i = 0; i < secondList.Length(); i++)
+    {
+        secondList.GetNext(num);
+        cout << num << " ";
     }
 }
