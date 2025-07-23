@@ -1,6 +1,5 @@
 #include "timestamp.h"
-#include <iostream>
-using namespace std;
+
 
 timeStamp::timeStamp()
 {
@@ -21,9 +20,16 @@ int timeStamp::getHours()
     return hours;
 }
 
-bool timeStamp::operator>(timeStamp &t2)
+bool operator > (timeStamp &obj1, timeStamp &obj2)
 {
-    if (this->getHours()>t2.getHours())
+    if (obj1.getHours() > obj2.getHours())
+        return true;
+    else
+        return false;
+}
+bool operator!=(timeStamp &obj1, timeStamp &obj2)
+{
+    if (obj1.getHours() != obj2.getHours())
         return true;
     else
         return false;

@@ -19,8 +19,8 @@ public:
     double getCGPA() const;
     
     // Friend operator overloading
-    friend bool operator==(Student&, Student&);
-    friend bool operator!=(Student&, Student&);
+    friend bool operator==(Student &obj1, Student &obj2);
+    friend bool operator!=(Student &obj1, Student &obj2 );
 };
 
 #endif // STUDENT_H 

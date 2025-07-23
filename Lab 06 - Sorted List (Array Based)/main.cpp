@@ -7,25 +7,25 @@ using namespace std;
 int main()
 {
     SortedType<int> list;
-    
+
     cout << "Length: " << list.Length() << endl;
-    
+
     list.Insert(5);
     list.Insert(7);
     list.Insert(4);
     list.Insert(2);
     list.Insert(1);
-    
+
     int num;
     for (int i = 0; i < list.Length(); i++)
     {
         list.GetNext(num);
         cout << num << " ";
     }
-    
+
     bool found;
     list.Search(6, found);
-    
+
     cout << (found ? "Item is found" : "Item is not found") << endl;
     list.Search(5, found);
     cout << (found ? "Item is found" : "Item is not found") << endl;
@@ -53,15 +53,27 @@ int main()
     timeList.Insert(t4);
     timeList.Insert(t5);
 
+    timeList.Delete(t4);
     timeStamp temp;
-
-    for(int i = 0; i < timeList.Length(); i++)
+    for (int i = 0; i < timeList.Length(); i++)
     {
         timeList.GetNext(temp);
         temp.printTime();
     }
 
-
-
     return 0;
+
+    // timeStamp h1;
+    // for(int i = 0; i < timeList.Length(); i++){
+    //     timeList.GetNext(h1);
+    //     if(h1.getHours() == 17){
+    //         timeList.Delete(h1);
+    //     }
+    // }
+    // timeList.Reset();
+
+    // for(int i = 0; i < timeList.Length(); i++){
+    //     timeList.GetNext(h1);
+    //     h1.printTime();
+    // }
 }

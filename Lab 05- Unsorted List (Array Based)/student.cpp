@@ -34,7 +34,7 @@ double Student::getCGPA() const
     return cgpa;
 }
 
-bool operator==(Student& obj1, Student& obj2)
+bool operator==(Student &obj1, Student &obj2)
 {
     if (obj1.getID() == obj2.getID())
     {
@@ -46,7 +46,7 @@ bool operator==(Student& obj1, Student& obj2)
     }
 }
 
-bool operator!=(Student& obj1, Student& obj2)
+bool operator!=(Student &obj1, Student &obj2)
 {
     if (obj1.getID() != obj2.getID())
     {
@@ -57,4 +57,3 @@ bool operator!=(Student& obj1, Student& obj2)
         return false;
     }
 }
-
