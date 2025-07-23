@@ -10,7 +10,7 @@ int main()
 
     dynArr arr1();
     dynArr arr2(size);
-
+    cout<<"Enter the values for the array: "<<endl;
     for (int i = 0; i < size; i++)
     {
         cin >> value;

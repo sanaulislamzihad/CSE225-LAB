@@ -8,7 +8,7 @@ int main()
 {
     SortedType<int> list;
     
-    cout << "Length: " << list.Length() << endl;
+    cout << "Lengths: " << list.Length() << endl;
     
     list.Insert(5);
     list.Insert(7);
