@@ -100,9 +100,8 @@ int main()
     cout << "Intersection (∩) = {";
     for (int i = 0; i < intersectionList.Length(); i++) {
         intersectionList.GetNext(num);
-        cout << num;
-        if (i < intersectionList.Length() - 1)
-            cout << ", ";
+        cout << num<< " ";
+      
     }
     cout << "}" << endl;
 
