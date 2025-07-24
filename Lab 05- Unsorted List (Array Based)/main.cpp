@@ -16,18 +16,6 @@ void printIntList(UnsortedType<int> &list)
     cout << endl;
 }
 
-// Function to print student list
-void printStudentList(UnsortedType<Student> &list)
-{
-    Student value;
-    list.Reset();
-    for (int i = 0; i < list.Length(); i++)
-    {
-        list.GetNext(value);
-        value.print();
-        cout << endl;
-    }
-}
 
 // Function to print search result
 void printSearch(bool found)
